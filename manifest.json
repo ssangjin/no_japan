@@ -1,0 +1,22 @@
+{
+  "name": "NO JAPAN",
+  "version": "1.0",
+  "description": "Ignore Japan products",
+  "permissions": [
+    "activeTab"
+  ],
+  "manifest_version": 2,
+  "browser_action": {
+		"default_title": "NO JAPAN",
+		"default_icon": "images/no.png",
+        "default_popup": "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : ["http://*/*", "https://*/*"],
+      "js" : ["treewalker.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ]	
+}
