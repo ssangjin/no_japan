@@ -51,6 +51,7 @@ function HideDiv(element) {
 function onLoad() {
 	// Here starts the bit for your content script
 	var list = [
+		"ABC마트‎",
 		"롯데",
 		"유니클로", "UNIQLO",
 		"소니", "SONY",
