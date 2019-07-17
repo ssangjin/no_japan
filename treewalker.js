@@ -1,6 +1,6 @@
 var node = document.createElement("div");
 var img = document.createElement("img");
-img.src="https://sjyun.hopto.org:8080/web_images/no_small.png"
+img.src="http://bit.ly/2JB0Xg9"
 node.appendChild(img);
 document.body.appendChild(node);
 
