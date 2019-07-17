@@ -144,7 +144,9 @@ function onLoad() {
 		"레토피아",
 		"듀엘내쇼날",
 		"오카모토 콘돔",
-		"사가미 콘돔"
+		"사가미 콘돔",
+    "갸스비",
+    "우루오스"
 	]
 	var re = new RegExp(`${list.join("|")}`, 'gi');
 	var regs;
@@ -167,3 +169,4 @@ function onLoad() {
 }
 
 onLoad();
+
