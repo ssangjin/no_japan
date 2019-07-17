@@ -11,6 +11,9 @@
 		"default_icon": "images/no.png",
         "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+    "images/*.png"
+  ],  
   "content_scripts" : [
     {
       "matches" : ["http://*/*", "https://*/*"],

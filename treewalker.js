@@ -1,10 +1,31 @@
-var node = document.createElement("div");
-var img = document.createElement("img");
-img.src = "data:image/png;base64,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"
-node.appendChild(img);
-node.style.display = "none";
+var showAlways = false;
 
-document.body.appendChild(node);
+var nojNode = document.createElement("div");
+var stringContainingXMLSource = "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:se=\"http://svg-edit.googlecode.com\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" width=\"40.699252002066174\" height=\"26.443611363746157\" style=\"\">                                    <title>my vector image</title>                                    <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->                                    <rect id=\"backgroundrect\" width=\"100%\" height=\"100%\" x=\"0\" y=\"0\" fill=\"#FFFFFF\" stroke=\"none\"/>                                <g class=\"currentLayer\" style=\"\"><title>Layer 1</title><foreignObject fill=\"#4a90d6\" stroke=\"#222222\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-dashoffset=\"\" fill-rule=\"nonzero\" font-size=\"25\" font-family=\"Arial, Helvetica, sans-serif\" letter-spacing=\"0\" word-spacing=\"0\" marker-start=\"\" marker-mid=\"\" marker-end=\"\" id=\"svg_2\" x=\"0.636174913415124\" y=\"1.6111021080296724\" width=\"35.71619886003289\" height=\"24.397168879087456\" style=\"color: rgb(0, 0, 0);\" class=\"\" font-weight=\"bold\"><p style=\"border: none;outline: none;font-size: inherit;line-height: 1em;padding:0;margin:0;\" xmlns=\"http://www.w3.org/1999/xhtml\"><p xmlns=\"http://www.w3.org/1999/xhtml\" style=\"border: none;outline: none;font-size: inherit;line-height: 1em;padding:0;margin:0;\">NO</p></p></foreignObject><path fill=\"#d50b0b\" fill-opacity=\"1\" stroke=\"#d50b0b\" stroke-opacity=\"1\" stroke-width=\"2\" stroke-dasharray=\"none\" stroke-linejoin=\"round\" stroke-linecap=\"butt\" stroke-dashoffset=\"\" fill-rule=\"nonzero\" opacity=\"1\" marker-start=\"\" marker-mid=\"\" marker-end=\"\" d=\"M20.397791550650048,13.807156531908547 C20.397791550650048,8.85473178382083 24.138905548120736,4.843267737869773 28.75756480425739,4.843267737869773 C33.37622406039405,4.843267737869773 37.11733805786473,8.85473178382083 37.11733805786473,13.807156531908547 C37.11733805786473,18.759581279996265 33.37622406039405,22.771045325947323 28.75756480425739,22.771045325947323 C24.138905548120736,22.771045325947323 20.397791550650048,18.759581279996265 20.397791550650048,13.807156531908547 z\" id=\"svg_5\" class=\"\"/></g></svg>"
+var parser = new DOMParser();
+
+if (showAlways == false) {
+	var imgDom = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
+	nojNode.append(imgDom.documentElement);
+	nojNode.style.display = "none";
+	document.body.appendChild(nojNode);
+}
+
+function findTag(node) {
+	var foundTag = false;
+	while (node != null) {
+		if (node.tagName != null 
+				&& (node.tagName.startsWith("H")  
+					|| node.tagName == "A" 
+					|| node.tagName == "SPAN")) {
+			return node;
+		} else {
+			node = node.parentElement;
+		}
+	}
+	
+	return null;
+}
 
 function ShowDiv(element) {
 	var viewportOffset = element.getBoundingClientRect();
@@ -15,20 +36,17 @@ function ShowDiv(element) {
 	var top = offset;
 	var left = viewportOffset.right;
 
-	//    alert("show" + top + " " + left);
-	//var div = document.getElementById("no_jap");
-	node.style.top = top + 'px';
-	node.style.left = left + 'px';
-	node.style.width = 256 + 'px';
-	node.style.width = 256 + 'px';
-	node.style.position = "absolute"
-	node.style.display = "";
+	nojNode.style.top = top + 'px';
+	nojNode.style.left = left + 'px';
+	nojNode.style.width = 25 + 'px';
+	nojNode.style.width = 25 + 'px';
+	nojNode.style.position = "absolute"
+	nojNode.style.display = "";
 }
 
 function HideDiv(element) {
-	node.style.display = "none";
+	nojNode.style.display = "none";
 }
-
 
 function onLoad() {
 	// Here starts the bit for your content script
@@ -156,18 +174,27 @@ function onLoad() {
 	var walker = document.createTreeWalker(
 		document.body, NodeFilter.SHOW_TEXT, function (node) {
 			if ((regs = re.exec(node.textContent))) {
-				node.parentElement.onmouseover = function () { ShowDiv(this); };
-				node.parentElement.onmouseout = function () { HideDiv(this); };
+				
+				if (showAlways) {
+					var div = findTag(node);
+					
+					if (div != null && div.addedNoj != true) {
+						var nojNode = document.createElement("div");
+						var imgDom = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
+						var imgNode = imgDom.documentElement;
+						div.append(imgNode);
+						div.addedNoj = true;
+					}
+				} else {
+					node.parentElement.onmouseover = function () { ShowDiv(this); };
+					node.parentElement.onmouseout = function () { HideDiv(this); };		
+				}
 			}
 			return NodeFilter.FILTER_SKIP;
 		}, false);
 
 	// Make the walker step through the nodes
 	walker.nextNode();
-
-	// and it ends here
-	// document.write("<div id=\"no_jap\" style=\"display: none;\" width=100 height=100>NO JAP</div>")
-
 }
 
 onLoad();
