@@ -17,7 +17,7 @@
   "content_scripts" : [
     {
       "matches" : ["http://*/*", "https://*/*"],
-      "js" : ["treewalker.js"],
+      "js" : ["jquery-3.4.1.slim.min.js", "treewalker.js"],
       "run_at" : "document_idle",
       "all_frames" : false
     }
