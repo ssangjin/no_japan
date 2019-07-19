@@ -40,7 +40,8 @@ function onLoad() {
 	}
 	
 	// Here starts the bit for your content script
-	var re = new RegExp(`${brandList.join("|")}`, 'gmi');
+	var brandRe = new RegExp(`${brandList.join("|")}`, 'gmi');
+	var linkRe = new RegExp(`${linkList.join("|")}`, 'gmi');
 	var regs;
 
 	var links = document.body.getElementsByTagName("A");
@@ -50,7 +51,7 @@ function onLoad() {
 			node.href = "#";
 		}
 		
-		if ((regs = re.exec(node.textContent))) {
+		if ((regs = brandRe.exec(node.textContent)) || (regs = linkRe.exec(node.href))) {
 			var div = node;
 			
 			if (showAlways) {
